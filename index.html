@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nyhetssida</title>
+  
+     <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDcnwwrvW3qNW1wx_gcUvoBUX6bHOTkRfk",
+    authDomain: "testdemo-392be.firebaseapp.com",
+    databaseURL: "https://testdemo-392be.firebaseio.com",
+    projectId: "testdemo-392be",
+    storageBucket: "testdemo-392be.appspot.com",
+    messagingSenderId: "727792864921"
+  };
+  firebase.initializeApp(config);
+</script>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="newsSite">
+        <div id="header">
+        <p id="title">News Site</p>
+            <div id="menu">
+                <a href="" class="menuItem">NYHETER</a><a href="" class="menuItem">SPORT</a><a href="" class="menuItem">NÖJE</a><a href="" class="menuItem">VÄDER</a><a href="" class="menuItem">DISKUSSION</a>
+            </div>
+        </div>
+
+        <div id="wrap-content">
+        <div class="content">
+        <h1>EN RUBRIK</h1>
+            <img src="http://www.operakelowna.com/wp-content/uploads/2016/05/OperaKelowna_NewsRoom_PressReleases.jpg"/>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum varius enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent eu mauris vel turpis pellentesque feugiat a mollis nibh. Phasellus tristique interdum purus non bibendum. Integer accumsan luctus dui vel venenatis. Mauris tempor, orci eu porta tristique, nisl ex sodales metus, vel dictum urna ipsum ut arcu. Aenean a lorem feugiat turpis euismod cursus eget ut ipsum. Pellentesque consequat iaculis elit eu hendrerit. Donec tincidunt ut ex a vehicula. Nunc id sollicitudin magna, nec pulvinar massa. </p>
+        </div>
+        </div>
+
+        <div id="footer">
+            <p id="footerText">Copyrights FEU16 & MVT16</p>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
