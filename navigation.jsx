@@ -10,11 +10,11 @@ class Navigation extends React.Component {
 }
 
 var linkList=[
-	{url:'https://www.ceasarantonio.github.io/Projekt-FEU-and-MVT-16/index.html', name:'Nyheter'},
+	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/index.html', name:'Nyheter'},
 	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/sport.html', name:'Sport'},
-	{url:'https://www.ceasarantonio.github.io/Projekt-FEU-and-MVT-16/noje.html', name:'Nöje'},
-	{url:'https://www.ceasarantonio.github.io/Projekt-FEU-and-MVT-16/vader.html', name:'Väder'},
-	{url:'https://www.ceasarantonio.github.io/Projekt-FEU-and-MVT-16/diskussion.html', name:'Diskussion'}
+	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/noje.html', name:'Nöje'},
+	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/vader.html', name:'Väder'},
+	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/diskussion.html', name:'Diskussion'}
 ]
 
 ReactDOM.render(<Navigation links={linkList} />, document.getElementById('menu'));
