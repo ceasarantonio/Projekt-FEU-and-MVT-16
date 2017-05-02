@@ -1,4 +1,4 @@
-window.onload = function(){
+
     
     var httpRequest;
     var newsList;
@@ -26,4 +26,3 @@ window.onload = function(){
     httpRequest.send();
     
     
-}
