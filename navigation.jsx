@@ -9,6 +9,9 @@ class Navigation extends React.Component {
 	}
 }
 
+
+
+
 var linkList=[
 	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/index.html', name:'Nyheter'},
 	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/sport.html', name:'Sport'},
