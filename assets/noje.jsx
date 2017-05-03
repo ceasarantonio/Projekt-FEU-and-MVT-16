@@ -5,7 +5,7 @@
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       ReactDOM.render(<Entertainment list={JSON.parse(this.responseText)} /> ,
-     document.getElementById("reactEntertainment")
+        document.getElementById("reactEntertainment")
       );      
     }
   };
@@ -24,20 +24,17 @@ class Entertainment extends React.Component {
     console.log(this.props.list.articles)
     let newList = oldList.map((object, key) => {
       if(object.urlToImage){
-        var imgEntertainment = <img src={object.urlToImage} width="600px" />
+        return(
+          <section key = {key}>
+            <h2>{object.title}</h2>
+            <p>{object.description}</p>
+            <img src={object.urlToImage} width="100%" />
+            <p>{object.author}</p>
+            <p>{object.publishedAt}</p>
+            <a href={object.url}> Read more</a>
+          </section>
+        );
       }
-      else {var imgEntertainment = <br/>}
-      
-      return(
-      <section key = {key}>
-        <h2>{object.title}</h2>
-        <p>{object.description}</p>
-        {imgEntertainment}
-        <p>{object.author}</p>
-        <p>{object.publishedAt}</p>
-        <a href={object.url}> Read more</a>
-      </section>
-      );
     });
     return(
     <div>
