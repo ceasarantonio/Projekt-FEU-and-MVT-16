@@ -21,7 +21,7 @@ class DiscussionApp extends React.Component {
   render() {
     return(
       <div>
-        <button onClick={this.componentWillMount}>Will it mount?</button>
+        
       </div>
     );
   }
