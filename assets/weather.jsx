@@ -1,7 +1,6 @@
 window.addEventListener("load", function () {
 //let APIkey = 'c43b65c449aaafbb9f96169692dfd5cb';
-//country code: Gothenburg,us
-// city ID : 5695743
+
     
     let temp1 = document.getElementById("temperature1");
     let temp2 = document.getElementById("temperature2");
