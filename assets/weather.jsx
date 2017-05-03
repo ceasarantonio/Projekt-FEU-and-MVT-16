@@ -273,18 +273,18 @@ window.addEventListener("load", function () {
             
             /// RUTA 1 ////
             if (jsonResponse.list[0].weather[0].description == "few clouds" || jsonResponse.list[0].weather[0].description == "scattered clouds"){
-                 box1.style.backgroundImage = 'url("weatherGraphic/fewclouds.jpg")';
+                 box1.style.backgroundImage = 'url("assets/weatherGraphic/fewclouds.jpg")';
                  
             }
             else if (jsonResponse.list[0].weather[0].description == "broken clouds"){
-                box1.style.backgroundImage = 'url("weatherGraphic/brokenclouds.jpg")';
+                box1.style.backgroundImage = 'url("assets/weatherGraphic/brokenclouds.jpg")';
             }
              else if (jsonResponse.list[0].weather[0].description == "light rain") {
-                 box1.style.backgroundImage = 'url("weatherGraphic/lightrain.jpg")';
+                 box1.style.backgroundImage = 'url("assets/weatherGraphic/lightrain.jpg")';
        
             }
              else if (jsonResponse.list[0].weather[0].description == "rain"){
-                 box1.style.backgroundImage = 'url("weatherGraphic/rain.jpg")';
+                 box1.style.backgroundImage = 'url("assets/weatherGraphic/rain.jpg")';
 
             };
 
@@ -292,76 +292,76 @@ window.addEventListener("load", function () {
             
             //// RUTA 2 ////
              if (jsonResponse.list[1].weather[0].description == "few clouds" || jsonResponse.list[1].weather[0].description == "scattered clouds"){
-                 box2.style.backgroundImage = 'url("weatherGraphic/fewclouds.jpg")';
+                 box2.style.backgroundImage = 'url("assets/weatherGraphic/fewclouds.jpg")';
                  
             }
             else if (jsonResponse.list[1].weather[0].description == "broken clouds"){
-                box2.style.backgroundImage = 'url("weatherGraphic/brokenclouds.jpg")';
+                box2.style.backgroundImage = 'url("assets/weatherGraphic/brokenclouds.jpg")';
             }
              else if (jsonResponse.list[1].weather[0].description == "light rain") {
-                 box2.style.backgroundImage = 'url("weatherGraphic/lightrain.jpg")';
+                 box2.style.backgroundImage = 'url("assets/weatherGraphic/lightrain.jpg")';
     
             }
              else if (jsonResponse.list[1].weather[0].description == "rain"){
-                 box2.style.backgroundImage = 'url("weatherGraphic/rain.jpg")';
+                 box2.style.backgroundImage = 'url("assets/weatherGraphic/rain.jpg")';
             };
             
             
             /// RUTA 3 ///
             
              if (jsonResponse.list[2].weather[0].description == "few clouds" || jsonResponse.list[2].weather[0].description == "scattered clouds"){
-                 box3.style.backgroundImage = 'url("weatherGraphic/fewclouds.jpg")';
+                 box3.style.backgroundImage = 'url("assets/weatherGraphic/fewclouds.jpg")';
                  
             }
             else if (jsonResponse.list[2].weather[0].description == "broken clouds"){
-                box3.style.backgroundImage = 'url("weatherGraphic/brokenclouds.jpg")';
+                box3.style.backgroundImage = 'url("assets/weatherGraphic/brokenclouds.jpg")';
             }
              else if (jsonResponse.list[2].weather[0].description == "light rain") {
-                 box3.style.backgroundImage = 'url("weatherGraphic/lightrain.jpg")';
+                 box3.style.backgroundImage = 'url("assets/weatherGraphic/lightrain.jpg")';
             }
              else if (jsonResponse.list[2].weather[0].description == "rain"){
-                 box3.style.backgroundImage = 'url("weatherGraphic/rain.jpg")';
+                 box3.style.backgroundImage = 'url("assets/weatherGraphic/rain.jpg")';
             };
             
             
             //7 RUTA 4 ///
              if (jsonResponse.list[3].weather[0].description == "few clouds" || jsonResponse.list[3].weather[0].description == "scattered clouds"){
-                 box4.style.backgroundImage = 'url("weatherGraphic/fewclouds.jpg")';
+                 box4.style.backgroundImage = 'url("assets/weatherGraphic/fewclouds.jpg")';
                  
             }
             else if (jsonResponse.list[3].weather[0].description == "broken clouds"){
-                box4.style.backgroundImage = 'url("weatherGraphic/brokenclouds.jpg")';
+                box4.style.backgroundImage = 'url("assets/weatherGraphic/brokenclouds.jpg")';
             }
             else if (jsonResponse.list[3].weather[0].description == "clear sky"){
-                 box4.style.backgroundImage = 'url("weatherGraphic/clearsky.jpg")';
+                 box4.style.backgroundImage = 'url("assets/weatherGraphic/clearsky.jpg")';
         
             }
              else if (jsonResponse.list[3].weather[0].description == "light rain") {
-                 box4.style.backgroundImage = 'url("weatherGraphic/lightrain.jpg")';
+                 box4.style.backgroundImage = 'url("assets/weatherGraphic/lightrain.jpg")';
             }
              else if (jsonResponse.list[3].weather[0].description == "rain"){
-                 box4.style.backgroundImage = 'url("weatherGraphic/rain.jpg")';
+                 box4.style.backgroundImage = 'url("assets/weatherGraphic/rain.jpg")';
             };
 
             /// RUTA 5 ///
              if (jsonResponse.list[4].weather[0].description == "few clouds" || jsonResponse.list[4].weather[0].description == "scattered clouds"){
-                 box5.style.backgroundImage = 'url("weatherGraphic/fewclouds.jpg")';
+                 box5.style.backgroundImage = 'url("assets/weatherGraphic/fewclouds.jpg")';
                  
             }
             else if (jsonResponse.list[4].weather[0].description == "broken clouds"){
-                box5.style.backgroundImage = 'url("weatherGraphic/brokenclouds.jpg")';
+                box5.style.backgroundImage = 'url("assets/weatherGraphic/brokenclouds.jpg")';
                 
             }
             else if (jsonResponse.list[4].weather[0].description == "clear sky"){
-                 box5.style.backgroundImage = 'url("weatherGraphic/clearsky.jpg")';
+                 box5.style.backgroundImage = 'url("assets/weatherGraphic/clearsky.jpg")';
              
             }
              else if (jsonResponse.list[4].weather[0].description == "light rain") {
-                 box5.style.backgroundImage = 'url("weatherGraphic/lightrain.jpg")';
+                 box5.style.backgroundImage = 'url("assets/weatherGraphic/lightrain.jpg")';
     
             }
              else if (jsonResponse.list[4].weather[0].description == "rain"){
-                 box5.style.backgroundImage = 'url("weatherGraphic/rain.jpg")';
+                 box5.style.backgroundImage = 'url("assets/weatherGraphic/rain.jpg")';
             };
            
         

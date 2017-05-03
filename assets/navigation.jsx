@@ -17,7 +17,7 @@ var linkList=[
 	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/sport.html', name:'Sport'},
 	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/noje.html', name:'Entertainment'},
 	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/vader.html', name:'Weather'},
-	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/diskussion.html', name:'Discussion'}
+	{url:'https://ceasarantonio.github.io/Projekt-FEU-and-MVT-16/discussion.html', name:'Discussion'}
 ]
 
 ReactDOM.render(<Navigation links={linkList} />, document.getElementById('menu'));

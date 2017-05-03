@@ -4,27 +4,12 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Nyhetssida</title>
-  
-     <script src="https://unpkg.com/react@latest/dist/react.js"></script>
-    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
-
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDcnwwrvW3qNW1wx_gcUvoBUX6bHOTkRfk",
-    authDomain: "testdemo-392be.firebaseapp.com",
-    databaseURL: "https://testdemo-392be.firebaseio.com",
-    projectId: "testdemo-392be",
-    storageBucket: "testdemo-392be.appspot.com",
-    messagingSenderId: "727792864921"
-  };
-  firebase.initializeApp(config);
-</script>
-<link href="assets/style.css" rel="stylesheet">
-    <link href="assets/weather.css" rel="stylesheet">
-    <script type="text/jsx" src="assets/weather.jsx"></script>
+  <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -32,7 +17,7 @@
         <div id="header">
         <p id="title">News Site</p>
             <div id="menu">
-                <a href="" class="menuItem">NYHETER</a><a href="" class="menuItem">SPORT</a><a href="" class="menuItem">NÖJE</a><a href="" class="menuItem">VÄDER</a><a href="" class="menuItem">DISKUSSION</a>
+                
             </div>
         </div>
 
@@ -64,6 +49,8 @@
     </div>
 
 
+<script type="text/babel" src="assets/navigation.jsx"></script>
+<script type="text/jsx" src="assets/weather.jsx"></script>
 
 
 </body>
