@@ -7,7 +7,22 @@
   <script src="https://unpkg.com/react@latest/dist/react.js"></script>
   <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-<link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <link href="assets/style.css" rel="stylesheet">
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBUdV0YHP1-dCiVgdejASvwWiwkwfA4wFg",
+    authDomain: "discussion-news.firebaseapp.com",
+    databaseURL: "https://discussion-news.firebaseio.com",
+    projectId: "discussion-news",
+    storageBucket: "discussion-news.appspot.com",
+    messagingSenderId: "471874495966"
+  };
+  firebase.initializeApp(config);
+  </script>
 </head>
 <body>
 
@@ -26,7 +41,7 @@
         </div>
     </div>
 
-<script type="text/babel" src="navigation.jsx"></script>
-<script type="text/babel" src="discussion.jsx"></script>
+<script type="text/babel" src="assets/navigation.jsx"></script>
+<script type="text/babel" src="assets/discussion.jsx"></script>
 </body>
 </html>
