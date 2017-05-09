@@ -9,7 +9,7 @@ class DiscussionApp extends React.Component {
       messages:'', messageAmount:null, user:null,}
     this.sendNewMessage = this.sendNewMessage.bind(this);
     this.completeAuthentication = this.completeAuthentication.bind(this);
-    self = this;}
+    const self = this;}
   componentDidMount() {
     const root = firebase.database().ref();
     firebase.database().ref('messages').on('value', snap => {
@@ -20,20 +20,21 @@ class DiscussionApp extends React.Component {
           return(
             <li key={key}>{object.name}: {object.message}</li>
           );})
-        this.setState({messages:msgs})
-        this.setState({messageAmount:list.length})}});}
+        self.setState({messages:msgs})
+        self.setState({messageAmount:list.length})}});}
   completeAuthentication(name) {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleProvider)
     .then(function(result) {
       let name = result.user.displayName;
+      console.log(name)
       self.setState({name:name});
       self.setState({loggedIn:true})})
     .catch(function(error) {
       console.error(error)});}
   sendNewMessage(object) {
     console.log(object)
-    firebase.database().ref('messages/' + this.state.messageAmount).set({name:this.state.name, message:object.message, time:object.time});}
+    firebase.database().ref('messages/' + self.state.messageAmount).set({name:self.state.name, message:object.message, time:object.time});}
   render() {
     return(
       <div>
