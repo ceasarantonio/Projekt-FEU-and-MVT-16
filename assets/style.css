@@ -218,5 +218,5 @@ a:hover {
 .messageText {}
 .messageTime {}
 #inputMessage {width:100%; padding:8px; font-size:20px;}
-input[type=submit] {border:2px solid #121212; padding:8px; background-color:#121212; color:#fff; font-weight:bolder;}
+input[type=submit] {border:2px solid #121212; padding:8px; background-color:#121212; color:#fff; font-weight:bolder; width:50px; float:right}
 
