@@ -8,7 +8,8 @@ class DiscussionApp extends React.Component {
     this.state = {
       messages:'', messageAmount:null, user:null,}
     this.sendNewMessage = this.sendNewMessage.bind(this);
-    this.completeAuthentication = this.completeAuthentication.bind(this);}
+    this.completeAuthentication = this.completeAuthentication.bind(this);
+    self = this;}
   componentDidMount() {
     const root = firebase.database().ref();
     firebase.database().ref('messages').on('value', snap => {
@@ -17,7 +18,7 @@ class DiscussionApp extends React.Component {
       if(list != null) {
         let msgs = list.map((object, key) => {
           return(
-            <li key={key}>{object.message}</li>
+            <li key={key}>{object.name}: {object.message}</li>
           );})
         this.setState({messages:msgs})
         this.setState({messageAmount:list.length})}});}
@@ -26,8 +27,8 @@ class DiscussionApp extends React.Component {
     firebase.auth().signInWithPopup(googleProvider)
     .then(function(result) {
       let name = result.user.displayName;
-      this.setState({name:name});
-      this.setState({loggedIn:true})})
+      self.setState({name:name});
+      self.setState({loggedIn:true})})
     .catch(function(error) {
       console.error(error)});}
   sendNewMessage(object) {
