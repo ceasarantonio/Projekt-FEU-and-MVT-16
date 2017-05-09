@@ -35,8 +35,7 @@ class DiscussionApp extends React.Component {
       console.error(error)});}
   bypassLogin() {
     self.setState({name:'Michael'});
-    self.setState({loggedIn:true})
-  }
+    self.setState({loggedIn:true})}
   sendNewMessage(object) {
     console.log(object)
     firebase.database().ref('messages/' + self.state.messageAmount).set({name:self.state.name, message:object.message, time:object.time});}
