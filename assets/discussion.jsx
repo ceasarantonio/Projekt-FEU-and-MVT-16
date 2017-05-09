@@ -1,7 +1,6 @@
 
 // FIREBASE
 const auth = firebase.auth();
-const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 
 let Gunnar = {name:'Gunnar', age:'20'}
@@ -46,9 +45,6 @@ class DiscussionApp extends React.Component {
   authenticate(result) {
     console.log(result)
   }
-  signup() {
-    console.log('signed up')
-  }
   sendNewMessage(object) {
     console.log(object)
     firebase.database().ref('messages/' + this.state.messageAmount).set({name:object.name, message:object.message, time:object.time});
@@ -60,7 +56,7 @@ class DiscussionApp extends React.Component {
         {this.state.messages}
         {(auth)
           ? <InputForm newMessage={this.sendNewMessage} user={Gunnar} />
-          : <AuthForm auth={this.authenticate} />}
+          : <AuthForm authenticate={this.authenticate} />}
       </div>);}}
 
 class InputForm extends React.Component {
@@ -96,12 +92,13 @@ class AuthForm extends React.Component {
   }
   handleLoginEvent(event) {
     event.preventDefault();
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleProvider)
     .then(function(result) {
-      this.props.auth(result);
+      this.props.authenticate(result);
     })
     .catch(function(error) {
-      console.error(error.message)
+      console.error(error)
     });
   }
   render() {
