@@ -94,7 +94,7 @@ class AuthForm extends React.Component {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleProvider)
     .then(function(result) {
-      this.props.authenticate(result);
+      console.log(result)
     })
     .catch(function(error) {
       console.error(error)
