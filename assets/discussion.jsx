@@ -42,7 +42,7 @@ class DiscussionApp extends React.Component {
         {this.state.messages}
         {(this.state.loggedIn)
           ? <InputForm newMessage={this.sendNewMessage}  />
-          : <AuthForm completeAuthenticate={this.authenticate} />}
+          : <AuthForm completeAuthentication={this.completeAuthentication} />}
       </div>);}}
 
 class InputForm extends React.Component {
