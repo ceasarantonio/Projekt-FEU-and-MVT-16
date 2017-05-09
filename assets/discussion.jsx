@@ -1,4 +1,7 @@
 
+/* OBSOLETE? */
+
+/*
 const auth = firebase.auth();
 let getID = id => document.getElementById(id);
 
@@ -91,3 +94,6 @@ class AuthForm extends React.Component {
 
 
 ReactDOM.render(<DiscussionApp />, getID('discussion'));
+
+
+*/
