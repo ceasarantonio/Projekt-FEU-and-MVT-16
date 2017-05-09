@@ -16,7 +16,7 @@ class DiscussionApp extends React.Component {
       messages:'', messageAmount:null, user:null,
     }
     this.sendNewMessage = this.sendNewMessage.bind(this);
-    this.completeAuthentication = this.completeAuthenticatíon.bind(this);
+    this.completeAuthentication = this.completeAuthentication.bind(this);
   }
   componentDidMount() {
     const root = firebase.database().ref();
