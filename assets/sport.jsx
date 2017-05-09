@@ -39,13 +39,13 @@ class App extends React.Component {
 class Artikel extends React.Component {   
     render () {
             return (
-                <div>
+                <section>
                 <h1>{this.props.title}</h1>
                 <img src={this.props.urlToImage} width="100%"/>
                 <p>{this.props.description}</p>
                 <a href={this.props.url}>Read full article</a>
                 <p>By: {this.props.author} || {this.props.publishedAt}</p>
-                </div>
+                </section>
     )
 }}
 ReactDOM.render(
