@@ -105,7 +105,7 @@ class AuthForm extends React.Component {
     return(
       <div>
         <h3>Log in to post:</h3>
-        <form onSubmit={this.handleLoginEvent.bind(this)}>
+        <form onSubmit={this.handleLoginEvent}>
           <button type="submit">Log in with Google</button>
         </form>
       </div>
