@@ -16,7 +16,7 @@ class DiscussionApp extends React.Component {
       messages:'', messageAmount:null, user:null,
     }
     this.sendNewMessage = this.sendNewMessage.bind(this);
-    this.authenticate = this.authenticate.bind(this);
+    this.completeAuthentication = this.completeAuthenticatíon.bind(this);
   }
   componentDidMount() {
     const root = firebase.database().ref();
@@ -41,21 +41,21 @@ class DiscussionApp extends React.Component {
       }
     });
   }
-  authenticate(result) {
-    console.log(result)
+  completeAuthentication(name) {
+    this.setState({name:name});
+    this.setState({loggedIn:true})
   }
   sendNewMessage(object) {
     console.log(object)
-    firebase.database().ref('messages/' + this.state.messageAmount).set({name:object.name, message:object.message, time:object.time});
+    firebase.database().ref('messages/' + this.state.messageAmount).set({name:this.state.name, message:object.message, time:object.time});
   }
   render() {
-    let auth = false;
     return(
       <div>
         {this.state.messages}
-        {(auth)
-          ? <InputForm newMessage={this.sendNewMessage} />
-          : <AuthForm authenticate={this.authenticate} />}
+        {(this.state.loggedIn)
+          ? <InputForm newMessage={this.sendNewMessage}  />
+          : <AuthForm completeAuthenticate={this.authenticate} />}
       </div>);}}
 
 class InputForm extends React.Component {
@@ -68,8 +68,6 @@ class InputForm extends React.Component {
     let inputMessage = event.target.querySelector('#inputMessage'); 
     // Get Time
     let date = new Date(); let timeString = date.toLocaleTimeString();
-    // Get User
-    let user = this.props.user.name;
     // Create message object
     let newObject = {name:user, message:(inputMessage.value), time:timeString};
     // Call list updater
@@ -87,14 +85,17 @@ class InputForm extends React.Component {
 class AuthForm extends React.Component {
   constructor(props) {
     super(props);
-    this.handleLoginEvent = this.handleLoginEvent.bind(this)
+    this.handleLoginEvent = this.handleLoginEvent.bind(this);
   }
   handleLoginEvent(event) {
     event.preventDefault();
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleProvider)
     .then(function(result) {
-      console.log(result)
+      let name = result.user.displayName;
+      console.log(name)
+
+      props.completeAuthentication(name);
     })
     .catch(function(error) {
       console.error(error)
