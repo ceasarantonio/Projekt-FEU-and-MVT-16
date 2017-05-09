@@ -53,8 +53,7 @@ class DiscussionApp extends React.Component {
     this.state = {
       messages:'', messageAmount:null, user:null,}
     this.sendNewMessage = this.sendNewMessage.bind(this);
-    this.completeAuthentication = this.completeAuthentication.bind(this);
-    const self = this;}
+    this.completeAuthentication = this.completeAuthentication.bind(this);}
   componentDidMount() {
     const root = firebase.database().ref();
     firebase.database().ref('messages').on('value', snap => {
@@ -65,8 +64,8 @@ class DiscussionApp extends React.Component {
           return(
             <li key={key}>{object.name}: {object.message}</li>
           );})
-        self.setState({messages:msgs})
-        self.setState({messageAmount:list.length})}});}
+        this.setState({messages:msgs})
+        this.setState({messageAmount:list.length})}});}
   completeAuthentication() {
     console.log(name)
     const googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -74,16 +73,16 @@ class DiscussionApp extends React.Component {
     .then(function(result) {
       let newName = result.user.displayName;
       console.log(newName)
-      self.setState({name:newName});
-      self.setState({loggedIn:true})})
+      this.setState({name:newName});
+      this.setState({loggedIn:true})}.bind(this))
     .catch(function(error) {
       console.error(error)});}
   bypassLogin() {
-    self.setState({name:'Michael'});
-    self.setState({loggedIn:true})}
+    this.setState({name:'Michael'});
+    this.setState({loggedIn:true})}
   sendNewMessage(object) {
     console.log(object)
-    firebase.database().ref('messages/' + self.state.messageAmount).set({name:self.state.name, message:object.message, time:object.time});}
+    firebase.database().ref('messages/' + this.state.messageAmount).set({name:this.state.name, message:object.message, time:object.time});}
   render() {
     return(
       <div>
