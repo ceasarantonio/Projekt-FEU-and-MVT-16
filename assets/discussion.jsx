@@ -30,9 +30,7 @@ class DiscussionApp extends React.Component {
       this.setState({loggedIn:true})
       console.log(name);})
     .catch(function(error) {
-      console.error(error)});
-    this.setState({name:name});
-    this.setState({loggedIn:true})}
+      console.error(error)});}
   sendNewMessage(object) {
     console.log(object)
     firebase.database().ref('messages/' + this.state.messageAmount).set({name:this.state.name, message:object.message, time:object.time});}
@@ -56,7 +54,7 @@ class InputForm extends React.Component {
     // Get Time
     let date = new Date(); let timeString = date.toLocaleTimeString();
     // Create message object
-    let newObject = {name:user, message:(inputMessage.value), time:timeString};
+    let newObject = {message:(inputMessage.value), time:timeString};
     // Call list updater
     this.props.newMessage(newObject);
     // Clear input
