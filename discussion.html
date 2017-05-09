@@ -82,9 +82,6 @@ class DiscussionApp extends React.Component {
       this.setState({loggedIn:true})}.bind(this))
     .catch(function(error) {
       console.error(error)});}
-  bypassLogin() {
-    this.setState({name:'Michael'});
-    this.setState({loggedIn:true})}
   sendNewMessage(object) {
     console.log(object)
     firebase.database().ref('messages/' + this.state.messageAmount).set({name:this.state.name, message:object.message, time:object.time});}
@@ -94,7 +91,7 @@ class DiscussionApp extends React.Component {
         {this.state.messages}
         {(this.state.loggedIn)
           ? <InputForm newMessage={this.sendNewMessage}  />
-          : <AuthForm bypassLogin={this.bypassLogin} completeAuthentication={this.completeAuthentication} />}
+          : <AuthForm completeAuthentication={this.completeAuthentication} />}
       </div>);}}
 
 class InputForm extends React.Component {
@@ -134,7 +131,6 @@ class AuthForm extends React.Component {
         <h3>Log in to post:</h3>
         <form onSubmit={this.handleLoginEvent}>
           <button type="submit">Log in with Google</button>
-          <button onClick={this.props.bypassLogin}>Bypass login</button>
         </form>
       </div>);}}
 
