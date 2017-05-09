@@ -62,7 +62,7 @@ class DiscussionApp extends React.Component {
       if(list != null) {
         let msgs = list.map((object, key) => {
           return(
-            <li key={key}>{object.name}: {object.message}</li>
+            <div class="message" key={key}><br/><span>{object.name}</span>: <span>{object.message}</span> <p>{object.time}</p><br/></div>
           );})
         this.setState({messages:msgs})
         this.setState({messageAmount:list.length})}});}
