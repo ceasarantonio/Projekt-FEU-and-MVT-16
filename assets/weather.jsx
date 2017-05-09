@@ -2,19 +2,27 @@
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        ReactDOM.render(<WeatherApp json={JSON.parse(this.responseText)} />,
+        ReactDOM.render(
+            <WeatherApp json={JSON.parse(this.responseText)} />,
             document.getElementById('weather-content')
         ); 
     }
   };
-  xhttp.open("GET", 'http://api.openweathermap.org/data/2.5/forecast?id=2711533&mode=json&units=metric&appid=c43b65c449aaafbb9f96169692dfd5cb', true);
+    
+    
+    
+    
+    let url = 'http://api.openweathermap.org/data/2.5/forecast?id=2711533&mode=json&units=metric&appid=c43b65c449aaafbb9f96169692dfd5cb';
+    
+  xhttp.open("GET", url, true);
   xhttp.send();
 }());
+
 let getWeatherTypeUrl = object => {
     switch(object) {
         case 'clear sky': return "assets/weatherGraphic/clearsky.jpg"
             break;
-        case 'shattered clouds': return "assets/weatherGraphic/brokenclouds.jpg"
+        case 'scattered clouds': return "assets/weatherGraphic/brokenclouds.jpg"
             break;
         case 'few clouds': return "assets/weatherGraphic/fewclouds.jpg"
             break;
@@ -44,7 +52,9 @@ class WeatherApp extends React.Component {
     render() {
         console.log(this.props.json)
         let weatherList = this.props.json.list;
+        let weatherCity = this.props.json.city.name;
         let newList = weatherList.map((object, key) => {
+            
             let time = object.dt_txt;
             let date = time.split(" ", 1);
             
@@ -72,13 +82,15 @@ class WeatherApp extends React.Component {
                 if (!weatherTypeUrl){
                     console.log(weatherTypeUrl);
                 }
-                return(
+                return(  
                     <div className="weatherList" key={key}>
+                      <p id="cityName">{weatherCity}</p>
                         <p className="weatherDate">{day}</p>
                         <img src={weatherTypeUrl} />
                         <p className="weatherDescription">{weatherDescription}<br/>Cloudiness: {cloudiness}%</p>
                         <p className="temperature">{temp}<span className="degree">&deg;C</span></p>
                     </div>
+                    
                 );
             }
         });
