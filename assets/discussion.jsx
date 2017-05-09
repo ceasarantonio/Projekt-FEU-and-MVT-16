@@ -22,13 +22,14 @@ class DiscussionApp extends React.Component {
           );})
         self.setState({messages:msgs})
         self.setState({messageAmount:list.length})}});}
-  completeAuthentication(name) {
+  completeAuthentication() {
+    console.lg(name)
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleProvider)
     .then(function(result) {
-      let name = result.user.displayName;
-      console.log(name)
-      self.setState({name:name});
+      let newName = result.user.displayName;
+      console.log(newName)
+      self.setState({name:newName});
       self.setState({loggedIn:true})})
     .catch(function(error) {
       console.error(error)});}
@@ -74,7 +75,7 @@ class AuthForm extends React.Component {
     this.handleLoginEvent = this.handleLoginEvent.bind(this);}
   handleLoginEvent(event) {
     event.preventDefault();
-    this.props.completeAuthentication(name);}
+    this.props.completeAuthentication();}
   render() {
     return(
       <div>
