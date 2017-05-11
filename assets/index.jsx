@@ -30,7 +30,7 @@ class RegularNews extends React.Component {
 					{imgToCurrentArticle}
 					<p>{object.author}</p>
 					<p>{object.publishedAt}</p>
-					<a href={object.url}> Read More </a>
+					<a href={object.url}> Read full article </a>
 				</section>
 			);
 		});
