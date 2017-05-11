@@ -214,9 +214,9 @@ a:hover {
 /* --- Chat --- */ 
 
 .message {border:2px solid #121212; margin-top:5px; padding:8px; background-color:#E5E4E2;background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%);box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.69);}}
-.messageName {font-weight:bold}
-.messageText {}
-.messageTime {}
-#inputMessage {width:100%; padding:8px; font-size:20px;}
-input[type=submit] {border:2px solid #121212; padding:8px; background-color:#121212; color:#fff; font-weight:bolder; width:50px; float:right}
+.messageName {font-weight:900}
+.messageText {color:#444}
+.messageTime {color:#777; font-style:italic}
+#inputMessage {width:calc(100% - 20px); padding:8px; font-size:20px;}
+input[type=submit] {border:2px solid #121212; padding:12px; font-size:20px; background-color:#121212; color:#fff; font-weight:bolder; width:100%;}
 
