@@ -31,7 +31,7 @@ class Entertainment extends React.Component {
             <img src={object.urlToImage} width="100%" />
             <p>{object.author}</p>
             <p>{object.publishedAt}</p>
-            <a href={object.url}>ssRead full article</a>
+            <a href={object.url}>Read full article</a>
           </section>
         );
       }
